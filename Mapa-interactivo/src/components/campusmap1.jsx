@@ -12,7 +12,7 @@ const markerIcons = {
     anfiteatro: L.icon({ iconUrl: "/icons/conference.png", iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, 0]}),
     caixa: L.icon({ iconUrl: "/icons/coin.png", iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, 0]}),
     lanchonete: L.icon({ iconUrl: "/icons/coffee.png", iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, 0]}),
-    servicos: L.icon({ iconUrl: "/icons/wrencg.png", iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, 0]}),
+    servicos: L.icon({ iconUrl: "/icons/wrench.png", iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, 0]}),
     vestidor: L.icon({ iconUrl: "/icons/changing-room.png", iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, 0]})
 };
 
@@ -235,5 +235,32 @@ export default function CampusMap1() {
 
     }, [filtros]);
 
-    return <div ref={mapContainerRef} style={{ height: "800px", width: "1000px" }} />;
+    const toggleFiltro = (categoria) => {
+        setFiltros(prev => ({
+            ...prev,
+            [categoria]: !prev[categoria]
+        }));
+    };
+
+    return (
+        <div style={{ display: "flex" }}>
+            <div style={{ width: "150px", marginRight: "100px" }}>
+                <h3>Filtros</h3>
+                {Object.keys(filtros).map((cat) => (
+                    <div key={cat}>
+                        <label>
+                            <input
+                                type="checkbox"
+                                checked={filtros[cat]}
+                                onChange={() => toggleFiltro(cat)}
+                            />
+                            {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                        </label>
+                    </div>
+                ))}
+            </div>
+
+            <div ref={mapContainerRef} style={{ height: "800px", width: "1000px" }} />
+        </div>
+    );
 }
