@@ -21,169 +21,202 @@ const markers = [
     {
     position: [-15.98903, -48.04506],
     popup: "Lanchonete Obelisco",
-    categoria: "lanchonete"
+    categoria: "lanchonete",
+    andar: "Térreo"
     },
     {
     position: [-15.98895, -48.04496],
     popup: "Secretaria/coordenação",
-    categoria: "informacao"
+    categoria: "informacao",
+    andar: "Térreo"
     },
     {
     position: [-15.9892, -48.04478],
     popup: "Anfiteatro entrada térreo",
-    categoria: "anfiteatro"
+    categoria: "anfiteatro",
+    andar: "Térreo"
     },
     {
     position: [-15.9889, -48.0448],
     popup: "Biblioteca da Faculdade do Gama",
-    categoria: "biblioteca"
+    categoria: "biblioteca",
+    andar: "Térreo"
     },
     {
     position: [-15.98894, -48.04476],
     popup: "Sala S-1",
-    categoria: "salaAula"
+    categoria: "salaAula",
+    andar: "Térreo"
     },
     {
     position: [-15.98895, -48.04471],
     popup: "Sala S-2",
-    categoria: "salaComputador"
+    categoria: "salaComputador",
+    andar: "Térreo"
     },
     {
     position: [-15.98898, -48.04468],
     popup: "Sala S-3",
-    categoria: "salaComputador"
+    categoria: "salaComputador",
+    andar: "Térreo"
     },
     {
     position: [-15.98903, -48.04466],
     popup: "Sala S-4",
-    categoria: "salaAula"
+    categoria: "salaAula",
+    andar: "Térreo"
     },
     {
     position: [-15.98906, -48.04463],
     popup: "Sala S-5",
-    categoria: "salaAula"
+    categoria: "salaAula",
+    andar: "Térreo"
     },
     {
     position: [-15.98909, -48.04458],
     popup: "Sala S-6",
-    categoria: "salaComputador"
+    categoria: "salaComputador",
+    andar: "Térreo"
     },
     {
     position: [-15.98912, -48.04455],
     popup: "Sala S-7",
-    categoria: "salaComputador"
+    categoria: "salaComputador",
+    andar: "Térreo"
     },
     {
     position: [-15.98917, -48.04452],
     popup: "Sala S-8",
-    categoria: "salaAula"
+    categoria: "salaAula",
+    andar: "Térreo"
     },
     {
     position: [-15.98921, -48.04449],
     popup: "Sala S-9",
-    categoria: "salaAula"
+    categoria: "salaAula",
+    andar: "Térreo"
     },
     {
     position: [-15.98941, -48.04467],
     popup: "Sala S-10",
-    categoria: "salaComputador"
+    categoria: "salaComputador",
+    andar: "Térreo"
     },
     //Marcadores para UED
     {
     position: [-15.98947, -48.04558],
     popup: "Gestão de Pessoas",
-    categoria: "informacao"
+    categoria: "informacao",
+    andar: "Térreo"
     },
     {
     position: [-15.98945, -48.04556],
     popup: "Núcleo de Atenção à Saúde",
-    categoria: "saude"
+    categoria: "saude",
+    andar: "Térreo"
     },
     {
     position: [-15.98942, -48.04553],
     popup: "Compras",
-    categoria: "informacao"
+    categoria: "informacao",
+    andar: "Térreo"
     },
     {
     position: [-15.9894, -48.0455],
     popup: "Administração",
-    categoria: "informacao"
+    categoria: "informacao",
+    andar: "Térreo"
     },
     {
     position: [-15.98938, -48.04548],
     popup: "Vestiário",
-    categoria: "vestidor"
+    categoria: "vestidor",
+    andar: "Térreo"
     },
     {
     position: [-15.98953, -48.04534],
     popup: "Entrada anfiteatro MOCAP",
-    categoria: "anfiteatro"
+    categoria: "anfiteatro",
+    andar: "Térreo"
     },
     {
     position: [-15.98947, -48.04545],
     popup: "Saída anfiteatro MOCAP",
-    categoria: "anfiteatro"
+    categoria: "anfiteatro",
+    andar: "Térreo"
     },
     {
     position: [-15.98964, -48.04538],
     popup: "Laboratório Quimica",
-    categoria: "laboratorio"
+    categoria: "laboratorio",
+    andar: "Térreo"
     },
     {
     position: [-15.98976, -48.04553],
     popup: "Lab. de Caracterização de Materiais",
-    categoria: "laboratorio"
+    categoria: "laboratorio",
+    andar: "Térreo"
     },
     {
     position: [-15.9898, -48.04558],
     popup: "Laboratório de Electricidade",
-    categoria: "laboratorio"
+    categoria: "laboratorio",
+    andar: "Térreo"
     },
     {
     position: [-15.98985, -48.04564],
     popup: "Laboratorio Fisica II",
-    categoria: "laboratorio"
+    categoria: "laboratorio",
+    andar: "Térreo"
     },
     {
     position: [-15.98991, -48.0457],
     popup: "Laboratorio Fisica I",
-    categoria: "laboratorio"
+    categoria: "laboratorio",
+    andar: "Térreo"
     },
     {
     position: [-15.98979, -48.04591],
     popup: "Sala dos Técnicos",
-    categoria: "servicos"
+    categoria: "servicos",
+    andar: "Térreo"
     },
     {
     position: [-15.98972, -48.04587],
     popup: "Laboratório de Eletrônica NEI 1",
-    categoria: "laboratorio"
+    categoria: "laboratorio",
+    andar: "Térreo"
     },
     {
     position: [-15.98967, -48.04581],
     popup: "Laboratório de Eletrônica NEI 2",
-    categoria: "laboratorio"
+    categoria: "laboratorio",
+    andar: "Térreo"
     },
     {
     position: [-15.98958, -48.04572],
     popup: "Laboratório de Software e Simulação",
-    categoria: "laboratorio"
+    categoria: "laboratorio",
+    andar: "Térreo"
     },
     {
     position: [-15.98964, -48.0456],
     popup: "Laboratório de Termofluidos",
-    categoria: "laboratorio"
+    categoria: "laboratorio",
+    andar: "Térreo"
     },
     //Marcadores para MESP
     {
     position: [-15.98946, -48.04411],
     popup: "Área de refeição",
-    categoria: "alimentacao"
+    categoria: "alimentacao",
+    andar: "Térreo"
     },
     {
     position: [-15.98952, -48.04404],
     popup: "Caixa RU",
-    categoria: "caixa"
+    categoria: "caixa",
+    andar: "Térreo"
     }
 ];
 
@@ -225,13 +258,35 @@ export default function CampusMap1() {
         markersRef.current.forEach(marker => marker.remove());
         markersRef.current = [];
 
+        const andares = {};
+
         markers
             .filter(m => filtros[m.categoria])
-            .forEach(({ position, popup, categoria }) => {
-                const icon = markerIcons[categoria] || markerIcons.outros;
-                const marker = L.marker(position, { icon }).addTo(mapInstanceRef.current).bindPopup(popup);
+            .forEach(m => {
+                if (!filtros[m.categoria]) return;
+
+                if (!andares[m.andar]) {
+                    andares[m.andar] = L.layerGroup();
+                }
+
+                const icon = markerIcons[m.categoria] || markerIcons.outros;
+                const marker = L.marker(m.position, { icon }).bindPopup(m.popup);
+                marker.addTo(andares[m.andar]);
                 markersRef.current.push(marker);
             });
+
+        if (mapInstanceRef.current._layerControl) {
+            mapInstanceRef.current.removeControl(mapInstanceRef.current._layerControl);
+        }
+
+        const layersControl = L.control.layers(null, andares, { collapsed: false }).addTo(mapInstanceRef.current);
+        mapInstanceRef.current._layerControl = layersControl;
+
+        Object.entries(andares).forEach(([andar, group]) => {
+            if (andar === "Térreo") {
+                group.addTo(mapInstanceRef.current);
+            }
+        });
 
     }, [filtros]);
 
