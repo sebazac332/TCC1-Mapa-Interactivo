@@ -17,6 +17,7 @@ const markerIcons = {
 };
 
 const markers = [
+    //Marcadores para terreo
     //Marcadores para UAC
     {
     position: [-15.98903, -48.04506],
@@ -44,61 +45,61 @@ const markers = [
     },
     {
     position: [-15.98894, -48.04476],
-    popup: "Sala S-1",
+    popup: "Sala I-1",
     categoria: "salaAula",
     andar: "Térreo"
     },
     {
     position: [-15.98895, -48.04471],
-    popup: "Sala S-2",
+    popup: "Sala I-2",
     categoria: "salaComputador",
     andar: "Térreo"
     },
     {
     position: [-15.98898, -48.04468],
-    popup: "Sala S-3",
+    popup: "Sala I-3",
     categoria: "salaComputador",
     andar: "Térreo"
     },
     {
     position: [-15.98903, -48.04466],
-    popup: "Sala S-4",
+    popup: "Sala I-4",
     categoria: "salaAula",
     andar: "Térreo"
     },
     {
     position: [-15.98906, -48.04463],
-    popup: "Sala S-5",
+    popup: "Sala I-5",
     categoria: "salaAula",
     andar: "Térreo"
     },
     {
     position: [-15.98909, -48.04458],
-    popup: "Sala S-6",
+    popup: "Sala I-6",
     categoria: "salaComputador",
     andar: "Térreo"
     },
     {
     position: [-15.98912, -48.04455],
-    popup: "Sala S-7",
+    popup: "Sala I-7",
     categoria: "salaComputador",
     andar: "Térreo"
     },
     {
     position: [-15.98917, -48.04452],
-    popup: "Sala S-8",
+    popup: "Sala I-8",
     categoria: "salaAula",
     andar: "Térreo"
     },
     {
     position: [-15.98921, -48.04449],
-    popup: "Sala S-9",
+    popup: "Sala I-9",
     categoria: "salaAula",
     andar: "Térreo"
     },
     {
     position: [-15.98941, -48.04467],
-    popup: "Sala S-10",
+    popup: "Sala I-10",
     categoria: "salaComputador",
     andar: "Térreo"
     },
@@ -217,6 +218,68 @@ const markers = [
     popup: "Caixa RU",
     categoria: "caixa",
     andar: "Térreo"
+    },
+    //Marcadores para 1 andar
+    //Marcadores para UAC
+    {
+    position: [-15.98894, -48.04476],
+    popup: "Sala S-1",
+    categoria: "salaAula",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.98895, -48.04471],
+    popup: "Sala S-2",
+    categoria: "salaAula",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.98898, -48.04468],
+    popup: "Sala S-3",
+    categoria: "salaAula",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.98903, -48.04466],
+    popup: "Sala S-4",
+    categoria: "salaAula",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.98906, -48.04463],
+    popup: "Sala S-5",
+    categoria: "salaAula",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.98909, -48.04458],
+    popup: "Sala S-6",
+    categoria: "salaAula",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.98912, -48.04455],
+    popup: "Sala S-7",
+    categoria: "salaAula",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.98917, -48.04452],
+    popup: "Sala S-8",
+    categoria: "salaAula",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.98921, -48.04449],
+    popup: "Sala S-9",
+    categoria: "salaAula",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.98941, -48.04467],
+    popup: "Sala S-10",
+    categoria: "salaComputador",
+    andar: "1 andar"
     }
 ];
 
@@ -279,14 +342,20 @@ export default function CampusMap1() {
             mapInstanceRef.current.removeControl(mapInstanceRef.current._layerControl);
         }
 
-        const layersControl = L.control.layers(null, andares, { collapsed: false }).addTo(mapInstanceRef.current);
-        mapInstanceRef.current._layerControl = layersControl;
-
-        Object.entries(andares).forEach(([andar, group]) => {
-            if (andar === "Térreo") {
-                group.addTo(mapInstanceRef.current);
+        Object.values(andares).forEach(group => {
+            if (mapInstanceRef.current.hasLayer(group)) {
+                mapInstanceRef.current.removeLayer(group);
             }
         });
+
+        const andarInicial = "Térreo";
+        if (andares[andarInicial]) {
+            andares[andarInicial].addTo(mapInstanceRef.current);
+        }
+
+        const layersControl = L.control.layers(andares, null, { collapsed: false }).addTo(mapInstanceRef.current);
+        mapInstanceRef.current._layerControl = layersControl;
+
 
     }, [filtros]);
 
