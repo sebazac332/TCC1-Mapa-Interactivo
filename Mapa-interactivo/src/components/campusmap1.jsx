@@ -29,7 +29,8 @@ const markers = [
     position: [-15.98895, -48.04496],
     popup: "Secretaria/coordenação",
     categoria: "informacao",
-    andar: "Térreo"
+    andar: "Térreo",
+    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
     position: [-15.9892, -48.04478],
@@ -280,6 +281,13 @@ const markers = [
     popup: "Sala S-10",
     categoria: "salaComputador",
     andar: "1 andar"
+    },
+    //Marcadores para UED
+{
+    position: [-15.98909, -48.04501],
+    popup: "Anfiteatro entrada primeiro andar",
+    categoria: "anfiteatro",
+    andar: "1 andar"
     }
 ];
 
@@ -332,8 +340,16 @@ export default function CampusMap1() {
                     andares[m.andar] = L.layerGroup();
                 }
 
+                const conteudoPopup = `
+                <div style="width:200px;">
+                    <h4 style="margin:0;">${m.popup}</h4>
+                    ${m.imagem ? `<img src="${m.imagem}" alt="${m.popup}" style="width:100%; margin-top:5px; border-radius:5px;" />` : ''}
+                    ${m.descricao ? `<p style="margin:5px 0;">${m.descricao}</p>` : ''}
+                </div>
+                `;   
+
                 const icon = markerIcons[m.categoria] || markerIcons.outros;
-                const marker = L.marker(m.position, { icon }).bindPopup(m.popup);
+                const marker = L.marker(m.position, { icon }).bindPopup(conteudoPopup);
                 marker.addTo(andares[m.andar]);
                 markersRef.current.push(marker);
             });
