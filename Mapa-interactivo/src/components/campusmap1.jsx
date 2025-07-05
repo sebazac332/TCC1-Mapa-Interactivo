@@ -220,6 +220,73 @@ const markers = [
     categoria: "caixa",
     andar: "Térreo"
     },
+    //Marcadores para LTDA
+    {
+    position: [-15.9903, -48.04433],
+    popup: "Sala-101/Nanotechnologia",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.99037, -48.04433],
+    popup: "Sala-102/Gmec",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.99042, -48.04434],
+    popup: "Sala-103/CAB",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.99048, -48.04434],
+    popup: "Sala-104/Laboratorio de estructuras aeroespaciais",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.99058, -48.04434],
+    popup: "Sala-105",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.99065, -48.04431],
+    popup: "Sala-106/Sala dos tecnicos",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.99058, -48.04427],
+    popup: "Sala-107/Laboratório de processos de fabricação",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.99053, -48.04427],
+    popup: "Sala-108/LASE",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.99048, -48.04427],
+    popup: "Sala-109/Laboratório de acústica e vibrações",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.9904, -48.04427],
+    popup: "Sala-110/Laboratório de tribologia",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.99034, -48.04427],
+    popup: "Sala-111/LTBIO",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
     //Marcadores para 1 andar
     //Marcadores para UAC
     {
@@ -283,10 +350,65 @@ const markers = [
     andar: "1 andar"
     },
     //Marcadores para UED
-{
+    {
     position: [-15.98909, -48.04501],
     popup: "Anfiteatro entrada primeiro andar",
     categoria: "anfiteatro",
+    andar: "1 andar"
+    },
+//Marcadores para LTDA
+    {
+    position: [-15.99028, -48.04436],
+    popup: "Sala-201/Sala de reunião",
+    categoria: "salaAula",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.99032, -48.04427],
+    popup: "Sala-202/LATAME",
+    categoria: "laboratorio",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.99038, -48.04427],
+    popup: "Sala-203/LOPRREN",
+    categoria: "laboratorio",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.99044, -48.04427],
+    popup: "Sala-204",
+    categoria: "laboratorio",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.99049, -48.04427],
+    popup: "Sala-205",
+    categoria: "laboratorio",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.99053, -48.04427],
+    popup: "Depósito",
+    categoria: "laboratorio",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.99053, -48.04434],
+    popup: "SALA-206",
+    categoria: "laboratorio",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.99046, -48.04433],
+    popup: "Sala-207",
+    categoria: "laboratorio",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.99036, -48.04433],
+    popup: "Sala-208",
+    categoria: "laboratorio",
     andar: "1 andar"
     }
 ];
