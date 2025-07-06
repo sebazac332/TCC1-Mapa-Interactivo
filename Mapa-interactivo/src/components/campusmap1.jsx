@@ -356,7 +356,7 @@ const markers = [
     categoria: "anfiteatro",
     andar: "1 andar"
     },
-//Marcadores para LTDA
+    //Marcadores para LTDA
     {
     position: [-15.99028, -48.04436],
     popup: "Sala-201/Sala de reunião",
@@ -390,7 +390,7 @@ const markers = [
     {
     position: [-15.99053, -48.04427],
     popup: "Depósito",
-    categoria: "laboratorio",
+    categoria: "servicos",
     andar: "1 andar"
     },
     {
@@ -410,6 +410,80 @@ const markers = [
     popup: "Sala-208",
     categoria: "laboratorio",
     andar: "1 andar"
+    },
+    //Marcadores para 2 andar
+    //Marcadores para LTDA
+    {
+    position: [-15.99032, -48.04434],
+    popup: "Sala-301/Sala de reunião",
+    categoria: "salaAula",
+    andar: "2 andar"
+    },
+    {
+    position: [-15.99036, -48.04434],
+    popup: "Sala-302",
+    categoria: "salaAula",
+    andar: "2 andar"
+    },
+    {
+    position: [-15.9904, -48.04434],
+    popup: "Sala-303",
+    categoria: "salaAula",
+    andar: "2 andar"
+    },
+    {
+    position: [-15.99044, -48.04434],
+    popup: "Sala-304",
+    categoria: "salaAula",
+    andar: "2 andar"
+    },
+    {
+    position: [-15.99048, -48.04434],
+    popup: "Sala-305",
+    categoria: "salaAula",
+    andar: "2 andar"
+    },
+    {
+    position: [-15.99052, -48.04434],
+    popup: "Sala-306",
+    categoria: "salaAula",
+    andar: "2 andar"
+    },
+    {
+    position: [-15.99056, -48.04434],
+    popup: "Sala-307",
+    categoria: "salaAula",
+    andar: "2 andar"
+    },
+    {
+    position: [-15.99056, -48.04427],
+    popup: "Deposito",
+    categoria: "servicos",
+    andar: "2 andar"
+    },
+    {
+    position: [-15.99052, -48.04428],
+    popup: "Sala-310/CEDIS",
+    categoria: "laboratorio",
+    andar: "2 andar"
+    },
+    {
+    position: [-15.99048, -48.04428],
+    popup: "Sala-311/ALab",
+    categoria: "laboratorio",
+    andar: "2 andar"
+    },
+    {
+    position: [-15.99043, -48.04427],
+    popup: "Sala-312/ITRAC",
+    categoria: "laboratorio",
+    andar: "2 andar"
+    },
+    {
+    position: [-15.99034, -48.04428],
+    popup: "Sala-313",
+    categoria: "salaAula",
+    andar: "2 andar"
     }
 ];
 
@@ -432,6 +506,8 @@ export default function CampusMap1() {
         servicos: true,
         vestidor: true
     });
+
+    const [andarVisivel, setAndarVisivel] = useState("Térreo");
 
     useEffect(() => {
         if (mapContainerRef.current && !mapInstanceRef.current) {
@@ -486,13 +562,21 @@ export default function CampusMap1() {
             }
         });
 
-        const andarInicial = "Térreo";
-        if (andares[andarInicial]) {
-            andares[andarInicial].addTo(mapInstanceRef.current);
+        if (andares[andarVisivel]) {
+            andares[andarVisivel].addTo(mapInstanceRef.current);
         }
 
         const layersControl = L.control.layers(andares, null, { collapsed: false }).addTo(mapInstanceRef.current);
         mapInstanceRef.current._layerControl = layersControl;
+
+        mapInstanceRef.current.on('layeradd', (e) => {
+            for (const [nomeAndar, layer] of Object.entries(andares)) {
+                if (e.layer === layer) {
+                    setAndarVisivel(nomeAndar);
+                    break;
+                }
+            }
+        });
 
 
     }, [filtros]);
