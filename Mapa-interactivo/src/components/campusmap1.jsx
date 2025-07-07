@@ -491,6 +491,14 @@ export default function CampusMap1() {
     const mapContainerRef = useRef(null);
     const mapInstanceRef = useRef(null);
     const markersRef = useRef([]);
+    const userMarkerRef = useRef(null);
+    const userCircleRef = useRef(null);
+
+    const options = {
+    enableHighAccuracy: true, 
+    timeout: 10000, 
+    maximumAge: 2000, 
+    };
 
     const [filtros, setFiltros] = useState({
         alimentacao: true,
@@ -580,6 +588,36 @@ export default function CampusMap1() {
 
 
     }, [filtros]);
+
+    useEffect(()=>{
+        function success(pos){
+
+            const lat = pos.coords.latitude;
+            const lng = pos.coords.longitude;
+            const accuracy = pos.coords.accuracy;
+
+            if(userMarkerRef.current){
+                mapInstanceRef.current.removeLayer(userMarkerRef.current);
+                mapInstanceRef.current.removeLayer(userCircleRef.current);
+            }
+
+            userMarkerRef.current = L.marker([lat, lng]).bindPopup("Você está aqui").addTo(mapInstanceRef.current);
+            userCircleRef.current = L.circle([lat, lng],{ radius:accuracy, interactive: false }).addTo(mapInstanceRef.current);
+        }
+
+        function error(err){
+
+            if (err.code === 1){
+                alert("Por favor ative a geolocalização")
+            } else {
+                alert("Localização atual não pode ser obtida")
+            }
+        }
+
+        const watchId = navigator.geolocation.watchPosition(success, error, options);
+
+        return () => navigator.geolocation.clearWatch(watchId);
+    },[]);
 
     const toggleFiltro = (categoria) => {
         setFiltros(prev => ({
