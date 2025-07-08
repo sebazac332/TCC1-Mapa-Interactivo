@@ -34,7 +34,7 @@ const markers = [
     },
     {
     position: [-15.9892, -48.04478],
-    popup: "Anfiteatro entrada térreo",
+    popup: "Auditório entrada térreo",
     categoria: "anfiteatro",
     andar: "Térreo"
     },
@@ -137,13 +137,13 @@ const markers = [
     },
     {
     position: [-15.98953, -48.04534],
-    popup: "Entrada anfiteatro MOCAP",
+    popup: "Entrada MOCAP",
     categoria: "anfiteatro",
     andar: "Térreo"
     },
     {
     position: [-15.98947, -48.04545],
-    popup: "Saída anfiteatro MOCAP",
+    popup: "Saída MOCAP",
     categoria: "anfiteatro",
     andar: "Térreo"
     },
@@ -287,6 +287,43 @@ const markers = [
     categoria: "laboratorio",
     andar: "Térreo"
     },
+    //Outros Marcadores
+    {
+    position: [-15.98991, -48.04522],
+    popup: "Laboratório de pesquisa",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.98972, -48.045],
+    popup: "LADES",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.98986, -48.04488],
+    popup: "ALab",
+    categoria: "laboratorio",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.98975, -48.04475],
+    popup: "Container N17",
+    categoria: "salaAula",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.99083, -48.04436],
+    popup: "Laboratório de soldagem",
+    categoria: "salaAula",
+    andar: "Térreo"
+    },
+    {
+    position: [-15.99083, -48.04424],
+    popup: "Laboratório de fundição",
+    categoria: "salaAula",
+    andar: "Térreo"
+    },
     //Marcadores para 1 andar
     //Marcadores para UAC
     {
@@ -349,13 +386,31 @@ const markers = [
     categoria: "salaComputador",
     andar: "1 andar"
     },
-    //Marcadores para UED
+    {
+    position: [-15.98892, -48.04494],
+    popup: "Sala Multiuso",
+    categoria: "salaAula",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.98896, -48.04499],
+    popup: "CODECA/DASU",
+    categoria: "salaAula",
+    andar: "1 andar"
+    },
+    {
+    position: [-15.989, -48.04504],
+    popup: "CPD",
+    categoria: "salaAula",
+    andar: "1 andar"
+    },
     {
     position: [-15.98909, -48.04501],
-    popup: "Anfiteatro entrada primeiro andar",
+    popup: "Auditório entrada primeiro andar",
     categoria: "anfiteatro",
     andar: "1 andar"
     },
+    //Marcadores para UED
     //Marcadores para LTDA
     {
     position: [-15.99028, -48.04436],
